@@ -1,1 +1,51 @@
-<p>layout works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand" routerLink="/">FormApp</a>
+
+    <!-- Toggle button (mobile) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/form" routerLinkActive="active">
+            Form
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/reactive-form" routerLinkActive="active">
+            Reactive Form
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/template-form" routerLinkActive="active">
+            Template Form
+          </a>
+        </li>
+      </ul>
+
+      <!-- Right side buttons -->
+      <div class="d-flex">
+        <button class="btn btn-outline-light me-2">Login</button>
+        <button class="btn btn-light">Register</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid">
+    <router-outlet />
+</div>

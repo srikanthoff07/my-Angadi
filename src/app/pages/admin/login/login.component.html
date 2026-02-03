@@ -1,1 +1,71 @@
-<p>login works!</p>
+<div class="parent-container">
+    <div class="container">
+
+  <!-- Login -->
+  <form class="card active" id="login">
+    <h2>Login</h2>
+
+    <div class="field">
+      <input type="email" required placeholder=" " name="email"  [(ngModel)]="loginObj.userName">
+      <label>Email</label>
+    </div>
+
+    <div class="field">
+      <input type="password" required placeholder=" " name="password" [(ngModel)]="loginObj.password">
+      <label>Password</label>
+    </div>
+
+    <button (click)="onLogin()">Login</button>
+
+    <div class="links">
+      <span onclick="show('register')">Create account</span> |
+      <span onclick="show('forgot')">Forgot?</span>
+    </div>
+  </form>
+
+  <!-- Register -->
+  <form class="card" id="register">
+    <h2>Register</h2>
+
+    <div class="field">
+      <input type="text" required placeholder=" ">
+      <label>Full Name</label>
+    </div>
+
+    <div class="field">
+      <input type="email" required placeholder=" ">
+      <label>Email</label>
+    </div>
+
+    <div class="field">
+      <input type="password" required placeholder=" ">
+      <label>Password</label>
+    </div>
+
+    <button>Create Account</button>
+
+    <div class="links">
+      <span onclick="show('login')">Already have an account?</span>
+    </div>
+  </form>
+
+  <!-- Forgot -->
+  <form class="card" id="forgot">
+    <h2>Reset Password</h2>
+
+    <div class="field">
+      <input type="email" required placeholder=" ">
+      <label>Email</label>
+    </div>
+
+    <button>Send Link</button>
+
+    <div class="links">
+      <span onclick="show('login')">Back to Login</span>
+    </div>
+  </form>
+
+</div>
+</div>
+
+
